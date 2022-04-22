@@ -1,19 +1,25 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 
 import React from "react";
 
 const SingleSong = ({ title, artist }) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.albumCover}></View>
+    <Pressable style={styles.container}>
+      <View style={styles.justify}>
+        <View style={[styles.albumCover, styles.justify]}></View>
+      </View>
       <View style={styles.detailsContainer}>
         <Text style={styles.artist}>{artist}</Text>
         <Text style={styles.title}>{title}</Text>
       </View>
-      <Ionicons name="heart-outline" size={24} color="white" />
-      <Entypo name="dots-three-horizontal" size={24} color="white" />
-    </View>
+      <View style={styles.justify}>
+        <Ionicons name="heart" size={24} color="white" />
+      </View>
+      <View style={styles.justify}>
+        <Entypo name="dots-three-horizontal" size={24} color="white" />
+      </View>
+    </Pressable>
   );
 };
 
@@ -22,14 +28,19 @@ export default SingleSong;
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    flex: 1,
+    // flex: 1,
     width: "100%",
+    height: 55,
     backgroundColor: "blue",
+    marginVertical: 2,
+    justifyContent: "space-between",
+    alignContent: "center",
+    padding: 5,
   },
   albumCover: {
     backgroundColor: "black",
-    height: 30,
-    width: 30,
+    height: 50,
+    width: 50,
   },
   detailsContainer: {
     justifyContent: "center",
@@ -44,5 +55,8 @@ const styles = StyleSheet.create({
     borderColor: "blue",
     borderWidth: 2,
     width: "100%",
+  },
+  justify: {
+    justifyContent: "center",
   },
 });

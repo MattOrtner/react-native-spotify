@@ -1,9 +1,12 @@
-import { StyleSheet, Text, View, Pressable, FlatList } from "react-native";
+import { StyleSheet, Text, View, Pressable, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import SingleSong from "../components/SingleSong";
 import DUMMY_SONGS from "../data/Dummy-Songs";
+import React, { useState } from "react";
 
 const LikedSongsScreen = () => {
+  const [songs, setSongs] = useState(DUMMY_SONGS);
+
   return (
     <View style={styles.screenContainer}>
       <View style={styles.topOfScreen}>
@@ -25,11 +28,15 @@ const LikedSongsScreen = () => {
           </View>
         </View>
       </View>
-      <FlatList
-        data={DUMMY_SONGS}
-        style={{ flex: 1 }}
-        renderItem={SingleSong}
-      />
+      <ScrollView style={{ width: "100%" }}>
+        {songs ? (
+          songs.map((song) => (
+            <SingleSong title={song.title} artist={song.artist} />
+          ))
+        ) : (
+          <Text>You don't have any favorite songs yet</Text>
+        )}
+      </ScrollView>
     </View>
   );
 };
