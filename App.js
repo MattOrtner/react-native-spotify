@@ -14,7 +14,11 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   function HomeStack() {
     return (
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: { backgroundColor: "#ffff" },
+        }}
+      >
         <Stack.Screen
           name="Tabs"
           component={HomeScreen}
@@ -22,7 +26,13 @@ export default function App() {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="LikedSongs" component={LikedSongsScreen} />
+        <Stack.Screen
+          name="LikedSongs"
+          component={LikedSongsScreen}
+          options={{
+            headerTitle: "",
+          }}
+        />
       </Stack.Navigator>
     );
   }
@@ -30,7 +40,6 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
-          headerStyle: { backgroundColor: "#f277c5" },
           tabBarStyle: {
             position: "absolute",
           },
