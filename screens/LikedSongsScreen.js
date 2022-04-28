@@ -31,7 +31,7 @@ const LikedSongsScreen = () => {
       <ScrollView style={{ width: "100%" }}>
         {songs ? (
           songs.map((song) => (
-            <SingleSong title={song.title} artist={song.artist} />
+            <SingleSong title={song.title} key={song.id} artist={song.artist} />
           ))
         ) : (
           <Text>You don't have any favorite songs yet</Text>
@@ -46,7 +46,6 @@ export default LikedSongsScreen;
 const styles = StyleSheet.create({
   screenContainer: {
     backgroundColor: "purple",
-    alignItems: "center",
     flex: 1,
   },
   topOfScreen: {
