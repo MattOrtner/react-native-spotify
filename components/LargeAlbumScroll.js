@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import React from "react";
-import ScrollableItem from "./ScrollableItem";
+import SideScrollItem from "./SideScrollItem";
 
 const LargeAlbumScroll = () => {
   return (
@@ -9,13 +9,13 @@ const LargeAlbumScroll = () => {
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.containerStyle}
     >
-      <ScrollableItem />
-      <ScrollableItem />
-      <ScrollableItem />
-      <ScrollableItem />
-      <ScrollableItem />
-      <ScrollableItem />
-      <ScrollableItem />
+      <SideScrollItem />
+      <SideScrollItem />
+      <SideScrollItem />
+      <SideScrollItem />
+      <SideScrollItem />
+      <SideScrollItem />
+      <SideScrollItem />
     </ScrollView>
   );
 };

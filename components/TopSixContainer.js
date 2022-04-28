@@ -8,7 +8,7 @@ const TopSixContainer = ({ navigate }) => {
       <View style={styles.column}>
         <TopSixButton navigate={navigate} title="Liked Songs" />
         <TopSixButton navigate={navigate} title="Ballet Pop 1" />
-        <TopSixButton navigate={navigate} title="Something" />
+        <TopSixButton navigate={navigate} title="Album" />
       </View>
       <View style={styles.column}>
         <TopSixButton navigate={navigate} title="THis is Deftones" />

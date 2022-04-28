@@ -7,6 +7,7 @@ import HomeScreen from "./screens/HomeScreen";
 import SearchScreen from "./screens/SearchScreen";
 import LibraryScreen from "./screens/LibraryScreen";
 import LikedSongsScreen from "./screens/LikedSongsScreen";
+import AlbumScreen from "./screens/AlbumScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -14,11 +15,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   function HomeStack() {
     return (
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: { backgroundColor: "#ffff" },
-        }}
-      >
+      <Stack.Navigator>
         <Stack.Screen
           name="Tabs"
           component={HomeScreen}
@@ -33,6 +30,7 @@ export default function App() {
             headerTitle: "",
           }}
         />
+        <Stack.Screen name="AlbumScreen" component={AlbumScreen} />
       </Stack.Navigator>
     );
   }

@@ -3,7 +3,11 @@ import React from "react";
 
 const TopSixButton = ({ navigate, title }) => {
   function onPressHandler() {
-    navigate("LikedSongs");
+    if (title === "Album") {
+      navigate("AlbumScreen");
+    } else {
+      navigate("LikedSongs");
+    }
   }
 
   return (
