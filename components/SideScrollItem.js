@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
 
-const ScrollableItem = () => {
+const SideScrollItem = () => {
   function onPressHandler() {}
   return (
     <Pressable style={styles.container} onPress={onPressHandler}>
@@ -14,7 +14,7 @@ const ScrollableItem = () => {
   );
 };
 
-export default ScrollableItem;
+export default SideScrollItem;
 
 const styles = StyleSheet.create({
   container: {
