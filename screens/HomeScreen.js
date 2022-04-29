@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView, StatusBar } from "react-native";
+import { StyleSheet, ScrollView, StatusBar } from "react-native";
 import React from "react";
 import TopSixContainer from "../components/TopSixContainer";
 import CategoryTitle from "../components/CategoryTitle";
@@ -8,6 +8,7 @@ import HeaderBar from "../components/HeaderBar";
 const HomeScreen = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <StatusBar />
       <HeaderBar />
       <TopSixContainer navigate={navigation.navigate} />
       <CategoryTitle title={"Your shows"} />

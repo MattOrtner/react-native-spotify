@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
 
 const TopSixButton = ({ navigate, title }) => {
@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     textAlign: "center",
-    backgroundColor: "blue",
     borderWidth: 2,
     justifyContent: "center",
     alignItems: "center",
-    margin: 5,
+    margin: 2,
+    borderRadius: 10,
   },
   contentWrapper: {
     flexDirection: "row",
@@ -46,13 +46,15 @@ const styles = StyleSheet.create({
   },
   imageHolder: {
     backgroundColor: "black",
-    width: 75,
-    height: 75,
-    marginRight: 3,
-    borderRadius: 5,
+    height: "100%",
+    marginRight: 5,
+    flex: 1,
+    borderBottomLeftRadius: 10,
+    borderTopLeftRadius: 10,
   },
   content: {
     flex: 1,
+    fontSize: 12,
     color: "white",
   },
 });
