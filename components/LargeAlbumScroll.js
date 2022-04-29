@@ -8,6 +8,7 @@ const LargeAlbumScroll = () => {
       horizontal={true}
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.containerStyle}
+      decelerationRate="normal"
     >
       <SideScrollItem />
       <SideScrollItem />
@@ -24,8 +25,8 @@ export default LargeAlbumScroll;
 
 const styles = StyleSheet.create({
   containerStyle: {
-    justifyContent: "center",
     backgroundColor: "#fff",
-    alignItems: "center",
+    height: 200,
+    left: 0,
   },
 });
