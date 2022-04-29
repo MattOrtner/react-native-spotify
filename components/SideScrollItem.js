@@ -7,8 +7,8 @@ const SideScrollItem = () => {
     <Pressable style={styles.container} onPress={onPressHandler}>
       <View style={styles.albumCover}></View>
       <View style={styles.detailContainer}>
-        <Text style={styles.details}>Album Name</Text>
-        <Text style={styles.details}>Artist</Text>
+        <Text style={styles.albumTitle}>Album Name</Text>
+        <Text style={styles.artist}>Artist</Text>
       </View>
     </Pressable>
   );
@@ -18,17 +18,25 @@ export default SideScrollItem;
 
 const styles = StyleSheet.create({
   container: {
-    width: 100,
-    height: 150,
-    borderColor: "white",
-    borderWidth: 2,
+    flex: 1,
+    padding: 5,
+    backgroundColor: "#86a68c",
   },
   detailContainer: {
     alignItems: "flex-start",
   },
   albumCover: {
-    height: 100,
-    width: 100,
+    height: 150,
+    width: 150,
     backgroundColor: "#a4c936",
+    borderRadius: 20,
+  },
+  albumTitle: {
+    fontWeight: "bold",
+    color: "white",
+  },
+  artist: {
+    color: "white",
+    opacity: 0.7,
   },
 });

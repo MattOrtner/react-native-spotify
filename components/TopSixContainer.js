@@ -1,6 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
 import TopSixButton from "./TopSixButton";
+
+const { height, width } = Dimensions.get("window");
 
 const TopSixContainer = ({ navigate }) => {
   return (
@@ -23,7 +25,7 @@ export default TopSixContainer;
 
 const styles = StyleSheet.create({
   container: {
-    height: "30%",
+    height: height / 3,
     width: "100%",
     backgroundColor: "red",
     flexDirection: "row",

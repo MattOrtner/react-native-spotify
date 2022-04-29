@@ -7,8 +7,7 @@ import HeaderBar from "../components/HeaderBar";
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <ScrollView style={styles.container}>
-      <StatusBar />
+    <ScrollView contentContainerStyle={styles.container}>
       <HeaderBar />
       <TopSixContainer navigate={navigation.navigate} />
       <CategoryTitle title={"Your shows"} />
@@ -25,7 +24,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginTop: 50,
+    padding: 10,
+    backgroundColor: "black",
   },
 });
