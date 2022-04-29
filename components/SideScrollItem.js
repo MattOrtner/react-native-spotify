@@ -1,10 +1,18 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const SideScrollItem = () => {
-  function onPressHandler() {}
+  const navigation = useNavigation();
+
+  function onPressHandler() {
+    navigation.navigate("AlbumScreen");
+  }
   return (
-    <Pressable style={styles.container} onPress={onPressHandler}>
+    <Pressable
+      style={({ pressed }) => [styles.container, pressed && styles.pressed]}
+      onPress={onPressHandler}
+    >
       <View style={styles.albumCover}></View>
       <View style={styles.detailContainer}>
         <Text style={styles.albumTitle}>Album Name</Text>
@@ -38,5 +46,8 @@ const styles = StyleSheet.create({
   artist: {
     color: "white",
     opacity: 0.7,
+  },
+  pressed: {
+    backgroundColor: "rgba(0,0,0,0.5)",
   },
 });

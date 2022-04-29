@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
 import TopSixButton from "./TopSixButton";
 
-const { height, width } = Dimensions.get("window");
+const { height, _ } = Dimensions.get("window");
 
 const TopSixContainer = ({ navigate }) => {
   return (
@@ -25,15 +25,15 @@ export default TopSixContainer;
 
 const styles = StyleSheet.create({
   container: {
-    height: height / 3,
+    height: 200,
     width: "100%",
-    backgroundColor: "red",
     flexDirection: "row",
-    padding: 5,
+    paddingBottom: 25,
   },
   column: {
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
+    backgroundColor: "blue",
   },
 });
