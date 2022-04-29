@@ -40,9 +40,8 @@ export default function App() {
         screenOptions={{
           tabBarStyle: {
             position: "absolute",
+            backgroundColor: " rgba( 0, 0, 0, 0.8)",
           },
-          tabBarActiveBackgroundColor: "#BCCBCD",
-          tabBarInactiveBackgroundColor: "grey",
           tabBarIcon: { color: "white" },
           headerShown: false,
         }}
@@ -52,7 +51,7 @@ export default function App() {
           component={HomeStack}
           options={{
             tabBarIcon: ({ tintColor }) => (
-              <Ionicons color={tintColor} name="home" size={24} />
+              <Ionicons color={"white"} name="home" size={24} />
             ),
           }}
         />
@@ -61,7 +60,7 @@ export default function App() {
           component={SearchScreen}
           options={{
             tabBarIcon: ({ tintColor }) => (
-              <Ionicons name="search" color={tintColor} size={24} />
+              <Ionicons name="search" color={"white"} size={24} />
             ),
           }}
         />
@@ -70,7 +69,7 @@ export default function App() {
           component={LibraryScreen}
           options={{
             tabBarIcon: ({ tintColor }) => (
-              <Ionicons color={tintColor} name="logo-octocat" size={24} />
+              <Ionicons color={"white"} name="logo-octocat" size={24} />
             ),
             title: "Your Library",
           }}
